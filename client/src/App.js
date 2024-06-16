@@ -7,7 +7,7 @@ import SteinResult from "./components/SteinResult.js";
 import KennedyResult from "./components/KennedyResult.js";
 
 import "./App.css";
-import Questions from "./components/questions.js";
+import Questions from "./components/Questions.js";
 
 const API_URL = process.env.REACT_APP_API;
 
