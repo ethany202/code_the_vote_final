@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let nameInput = document.getElementById("name-input")
+
+        function makePost(){
+            console.log(nameInput)
+            fetch("/send-responses", {
+                method: "POST",
+                body: JSON.stringify({
+                    answer: "HI"
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8'
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    <h1>HELLO WORLD</h1>
+    <form>
+        <input id="name-input" placeholder="Type answers" name="answers"/>
+        <button onclick="makePost()">BUTTOn</button>
+    </form>
+</body>
+</html>
